@@ -1,8 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/vuetify-cabinet.css": "/css/vuetify-cabinet.css",
-    "/js/editor.js": "/js/editor.js",
-    "/js/manifest.js": "/js/manifest.js",
-    "/js/vendor.js": "/js/vendor.js"
+    "/assets/js/home.js": "/assets/js/home.js",
+    "/assets/css/home.css": "/assets/css/home.css",
+    "/assets/js/login.js": "/assets/js/login.js",
+    "/assets/js/manifest.js": "/assets/js/manifest.js",
+    "/assets/js/vendor.js": "/assets/js/vendor.js"
 }

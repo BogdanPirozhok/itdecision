@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/js/vendor"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["/assets/js/vendor"],{
 
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
@@ -12485,7 +12485,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*****************!*\
   !*** multi vue ***!
   \*****************/
@@ -12497,4 +12497,4 @@ module.exports = __webpack_require__(/*! vue */"./node_modules/vue/dist/vue.comm
 
 /***/ })
 
-},[[1,"/js/manifest"]]]);
+}]);
