@@ -11,8 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-	.js('resources/js/editor.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/vuetify-cabinet.scss', 'public/css')
+mix.js('resources/assets/js/Home/index.js', 'public/assets/js/home.js')
+    .js('resources/assets/js/Login/index.js', 'public/assets/js/login.js')
     .extract(['vue']);
+
+mix.sass('resources/assets/sass/Home/index.scss', 'public/assets/css/home.css');

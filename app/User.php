@@ -38,9 +38,8 @@ class User extends Authenticatable
     ];
 
 
-    public function isAdmin ()
+    public function isDev ()
     {
-        return $this->role === 'admin';
+        return in_array($this->role, [1, 2, 3]);
     }
-
 }

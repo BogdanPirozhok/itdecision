@@ -22,16 +22,13 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
+
     public function boot()
     {
         $this->registerPolicies();
 
-        Gate::define('admin-panel', function (User $user) {
-            if(!$user->isAdmin()){
-                abort(404);
-            }
-
-            return $user->isAdmin();
+        Gate::define('dev-panel', function (User $user) {
+            return $user->isDev();
         });
     }
 }

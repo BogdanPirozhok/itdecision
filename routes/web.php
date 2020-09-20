@@ -13,23 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','Auth\LoginController@showLoginForm')->name('home');
 
-Auth::routes();
+Route::post('/login',  'Auth\LoginController@login')->name('login');
+Route::post('/logout', 'Auth\LoginController@logout');
 
 Route::group([
-		'prefix' => '/editor',
-        'middleware' => ['auth', 'can:admin-panel']
-    ], 
+		'prefix' => '/home',
+        'middleware' => ['auth', 'can:dev-panel']
+    ],
     function () {
-    	Route::namespace('Admin')->group(function () {
-    		Route::get('/', 'AdminController@index');
-			Route::get('/category', 'CategoryController@index');
-	    	Route::post('/category/delete', 'CategoryController@delete');
-	    	Route::post('/category/create', 'CategoryController@create');
-	    	Route::post('/category/edit', 'CategoryController@edit');
+    	Route::namespace('Home')->group(function () {
+    		Route::get('/', 'HomeController@index');
+
+	    	Route::post('/category/delete', 'TasksController@delete');
+	    	Route::post('/category/create', 'TasksController@create');
+	    	Route::post('/category/edit',   'TasksController@edit');
     	});
     }
 );
